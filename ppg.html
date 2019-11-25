@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+         <!--JS-->
+    <script>
+
+        function getPace() {
+            
+            points = document.getElementById('points').value;
+            games = document.getElementById('games').value;
+            out = document.getElementById('result');
+        
+            var result = ((points / games) * 82);
+            out.innerText = result;            
+        }
+        
+    </script>
+        <!--END JS-->
+        <!--CSS
+        font-family: 'Roboto Mono', monospace;
+        font-family: 'Bowlby One SC', cursive;
+        -->
+    <style>
+        input{
+            font-family: 'Roboto Mono', monospace;
+            border: 0;
+            outline: 0;
+            background: transparent;
+            border-bottom: 1px solid black;
+        }
+        input[type=number]::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        }
+    </style>
+        <!--END CSS-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=Bowlby+One+SC|Roboto+Mono&display=swap" rel="stylesheet">
+    <title>Document</title>
+
+</head>
+    <body>
+        <form id="frm">
+        Points: <input type="number" id="points" min="0"><br>
+        Games played this season so far: <input type="number" id="games" min="0" max="82"><br>
+        <p id="result"></p>
+        </form>
+        <button onclick="getPace()">Calculate</button>
+    </body>
+</html>
